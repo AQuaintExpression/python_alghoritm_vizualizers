@@ -2,6 +2,9 @@ from turtle import colormode
 from rich import print as rprint
 import time
 
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+
 
 def bubble_sort_one_step(our_list, i=0, j=0, sorted=False):
     # We go through the list as many times as there are elements
@@ -22,9 +25,11 @@ sorted = False
 while not sorted:
     sorted, i, j = bubble_sort_one_step(our_list)
 
-
+    plt.plot([x for x in range(len(our_list))], our_list)
     colored_list = [str(x) for x in our_list]
     colored_list = [x if index not in [j, j+1] else '[bold red]' + x + '[/]' for index, x in enumerate(colored_list)]
 
     rprint(', '.join(colored_list))
-    time.sleep(1)
+    time.sleep(0.2)
+
+plt.show()
