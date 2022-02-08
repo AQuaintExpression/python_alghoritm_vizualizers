@@ -3,9 +3,6 @@ from rich import print as rprint
 import time
 
 
-
-
-
 def bubble_sort_one_step(our_list, i=0, j=0, sorted=False):
     # We go through the list as many times as there are elements
     for i in range(len(our_list)):
