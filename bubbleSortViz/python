@@ -1,0 +1,7 @@
+a = [3 * x for x in range(10)]
+b = [value**3 if index % 2 == 0 else 'blank' for index, value in enumerate(a)]
+
+b
+[0, 'blank', 216, 'blank', 1728, 'blank', 5832, 'blank', 13824, 'blank']
+a
+[0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
