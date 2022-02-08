@@ -22,13 +22,13 @@ def animation_frame(i, rand_list):
     for index, elem in enumerate(rand_list):
         rand_list[index] = rand_list[index] + 1
 
-    return line, 
+    return line, index, 5, 6, 7
 
 
 animation = FuncAnimation(
     fig,
     func=animation_frame,
-    frames=np.arange(0, 10, 0.01),
+    frames=np.arange(0, 10, 0.01), #the frames arg takes any type of iterable eg: a generator
     interval=500,
     fargs=([1, 2, 3],)
 )
